@@ -2,7 +2,7 @@
 
 set -e
 
-MAVEN_URL="https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz"
+MAVEN_URL="https://pan.isn.im/d/%E8%BD%AF%E4%BB%B6/apache-maven-3.9.12-bin.tar.gz"
 INSTALL_DIR="/usr/local"
 MAVEN_NAME="apache-maven-3.9.12"
 PROFILE_FILE="/etc/profile"
