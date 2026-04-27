@@ -16,7 +16,7 @@ fi
 echo ">>> 2. 下载 JDK"
 cd /tmp
 if [ ! -f jdk-8u321-linux-x64.tar.gz ]; then
-  wget -O jdk-8u321-linux-x64.tar.gz "$JDK_URL"
+  wget -O jdk-8u321-linux-x64.tar.gz "$JDK_URL" --no-check-certificate
 else
   echo "JDK 压缩包已存在，跳过下载"
 fi
