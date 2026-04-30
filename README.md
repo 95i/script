@@ -14,3 +14,7 @@ source ~/.bashrc
 nvm install 18
 nvm use 18
 ```
+## Centos7修改yum源
+```bash
+curl -o /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/95i/script/refs/heads/main/CentOS-7-anon.repo
+```
