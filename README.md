@@ -11,8 +11,8 @@ curl -fsSL https://raw.githubusercontent.com/95i/script/refs/heads/main/install_
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
 source ~/.bashrc
-nvm install 18
-nvm use 18
+nvm install 22
+nvm use 22
 ```
 ## Centos7修改yum源
 ```bash
