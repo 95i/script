@@ -18,3 +18,26 @@ nvm use 22
 ```bash
 curl -o /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/95i/script/refs/heads/main/CentOS-7-anon.repo
 ```
+## Centos8修改yum源
+```bash
+rm -rf /etc/yum.repos.d/*
+cat > /etc/yum.repos.d/CentOS-Vault.repo <<'EOF'
+[BaseOS]
+name=CentOS-8 - BaseOS
+baseurl=https://vault.centos.org/8.5.2111/BaseOS/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=CentOS-8 - AppStream
+baseurl=https://vault.centos.org/8.5.2111/AppStream/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[extras]
+name=CentOS-8 - Extras
+baseurl=https://vault.centos.org/8.5.2111/extras/x86_64/os/
+enabled=1
+gpgcheck=0
+EOF
+```
