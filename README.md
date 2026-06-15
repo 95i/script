@@ -40,4 +40,6 @@ baseurl=https://vault.centos.org/8.5.2111/extras/x86_64/os/
 enabled=1
 gpgcheck=0
 EOF
+dnf clean all
+dnf makecache
 ```
