@@ -21,24 +21,34 @@ curl -o /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/95i/
 ## Centos8修改yum源
 ```bash
 rm -rf /etc/yum.repos.d/*
-cat > /etc/yum.repos.d/CentOS-Vault.repo <<'EOF'
+cat >/etc/yum.repos.d/CentOS-Vault.repo <<'EOF'
 [BaseOS]
-name=CentOS-8 - BaseOS
-baseurl=https://vault.centos.org/8.5.2111/BaseOS/x86_64/os/
+name=CentOS-8.5 - BaseOS
+baseurl=https://mirrors.aliyun.com/centos-vault/8.5.2111/BaseOS/$basearch/os/
 enabled=1
-gpgcheck=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 [AppStream]
-name=CentOS-8 - AppStream
-baseurl=https://vault.centos.org/8.5.2111/AppStream/x86_64/os/
+name=CentOS-8.5 - AppStream
+baseurl=https://mirrors.aliyun.com/centos-vault/8.5.2111/AppStream/$basearch/os/
 enabled=1
-gpgcheck=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+[PowerTools]
+name=CentOS-8.5 - PowerTools
+baseurl=https://mirrors.aliyun.com/centos-vault/8.5.2111/PowerTools/$basearch/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 [extras]
-name=CentOS-8 - Extras
-baseurl=https://vault.centos.org/8.5.2111/extras/x86_64/os/
+name=CentOS-8.5 - Extras
+baseurl=https://mirrors.aliyun.com/centos-vault/8.5.2111/extras/$basearch/os/
 enabled=1
-gpgcheck=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 EOF
 dnf clean all
 dnf makecache
